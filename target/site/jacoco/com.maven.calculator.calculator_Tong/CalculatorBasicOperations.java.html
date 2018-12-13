@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="sv"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculatorBasicOperations.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">calculator-Tong</a> &gt; <a href="index.source.html" class="el_package">com.maven.calculator.calculator_Tong</a> &gt; <span class="el_source">CalculatorBasicOperations.java</span></div><h1>CalculatorBasicOperations.java</h1><pre class="source lang-java linenums">package com.maven.calculator.calculator_Tong;
+
+
+<span class="fc" id="L4">	public  class CalculatorBasicOperations implements CalculatorBasicOperationsInterface {</span>
+		int basicOperationMode; 
+		/**
+		 * 1,2,3,4 equal to  +, -, x, / 0 equal NULL
+		 */
+		double a;
+		double b;
+
+		public double basicFunc(){
+			/**
+			 * this is method which realize four calculation functions
+			 */
+<span class="fc" id="L16">			double result = 0;</span>
+<span class="pc bpc" id="L17" title="1 of 5 branches missed.">					switch(this.basicOperationMode){</span>
+<span class="fc" id="L18">					case 1:result=this.a+this.b;</span>
+<span class="fc" id="L19">					break;</span>
+<span class="fc" id="L20">					case 2:result=this.a-this.b;</span>
+<span class="fc" id="L21">					break;</span>
+<span class="fc" id="L22">					case 3:result=this.a*this.b;</span>
+<span class="fc" id="L23">					break;</span>
+					case 4:
+						/** 
+						 * make sure b is not ZERO
+						 */
+<span class="pc bpc" id="L28" title="1 of 2 branches missed.">						  if(0!=b)</span>
+<span class="fc" id="L29">						   {result=this.a/this.b;break;}</span>
+						  
+					//default: result=0;
+				//break;
+		}
+			
+<span class="fc" id="L35">			return result;</span>
+			
+		}
+
+		}
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

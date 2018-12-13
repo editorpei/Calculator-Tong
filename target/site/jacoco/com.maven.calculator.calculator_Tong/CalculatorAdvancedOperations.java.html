@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="sv"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculatorAdvancedOperations.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">calculator-Tong</a> &gt; <a href="index.source.html" class="el_package">com.maven.calculator.calculator_Tong</a> &gt; <span class="el_source">CalculatorAdvancedOperations.java</span></div><h1>CalculatorAdvancedOperations.java</h1><pre class="source lang-java linenums">package com.maven.calculator.calculator_Tong;
+
+
+<span class="fc" id="L4">	public class CalculatorAdvancedOperations implements CalculatorAdvancedOperationsInterface  {</span>
+		int OpMode; //5,6,7,8,9,10 equal to  sinx, cos, x2, x3, abs(x),1/x 0 equal NULL
+		double a;
+		
+
+		public double advFunc(){
+<span class="fc" id="L10">			double  result=0;</span>
+<span class="pc bpc" id="L11" title="1 of 7 branches missed.">					switch(OpMode){</span>
+<span class="fc" id="L12">					case 5:result=Math.sin(a);	</span>
+					/** 
+					 * this is sin function
+					 */
+<span class="fc" id="L16">					break;</span>
+<span class="fc" id="L17">					case 6:result=Math.cos(a); </span>
+					/**
+					 * this is cos function
+					 */
+<span class="fc" id="L21">					break;</span>
+<span class="fc" id="L22">					case 7:result=a*a;		</span>
+					/**
+					 * square function
+					 */
+<span class="fc" id="L26">					break;</span>
+<span class="fc" id="L27">					case 8:result=a*a*a;	</span>
+					/**
+					 * this is cubed function
+					 */
+<span class="fc" id="L31">					break;</span>
+<span class="fc" id="L32">					case 9:result=Math.abs(a);	</span>
+					/**
+					 * this is  abs function
+					 */
+<span class="fc" id="L36">					break;</span>
+					case 10:             
+						/**
+						 * this is reciprocal function
+						 */
+<span class="pc bpc" id="L41" title="1 of 2 branches missed.">						if(0!=a)</span>
+<span class="fc" id="L42">						{result=1/a;			</span>
+						break;}
+					    
+					//default:break;
+					
+		          }
+			
+<span class="fc" id="L49">			return result;</span>
+		}
+			
+				
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
